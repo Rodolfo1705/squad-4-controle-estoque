@@ -6,18 +6,17 @@ import javax.persistence.Persistence;
 
 public class AlteracaoDeProduto {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("contestoque");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityManager entityManager = Util.getEntityManager();
 
         entityManager.getTransaction().begin();
         Produto produto = entityManager.find(Produto.class, 2);
         if (produto != null) {
-            double novoPreco = 345.00;
-            produto.setPreco(novoPreco);
+            produto.setPreco(345.00);
         } else {
             System.out.println("Produto não encontrado.");
         }
         entityManager.getTransaction().commit();
         entityManager.close();
+        Util.closeEntityManagerFactory();
     }
 }
