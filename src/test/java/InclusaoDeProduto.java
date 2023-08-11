@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class InclusaoDeProduto {
     public static void main(String[] args){
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("squad-4-controle-estoque");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("contestoque");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         Produto produto1 = new Produto("Panela", "Panela de pressão 10 litros", 56.80 );
