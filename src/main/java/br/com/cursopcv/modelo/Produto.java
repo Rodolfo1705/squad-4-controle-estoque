@@ -40,10 +40,4 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-
-    public Produto(String nome, String descricao, double preco){
-        this.nome = nome;
-        this.descricao = descricao;
-        this.preco = preco;
-    }
 }

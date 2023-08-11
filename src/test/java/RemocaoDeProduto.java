@@ -15,7 +15,6 @@ public class RemocaoDeProduto {
         entityManager.remove(produto);
 
         entityManager.getTransaction().commit();
-        entityManager.close();
         Util.closeEntityManagerFactory();
     }
 }
