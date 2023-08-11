@@ -19,5 +19,6 @@ public class InclusaoDeProduto {
         entityManager.persist(produto2);
         entityManager.persist(produto3);
         entityManager.getTransaction().commit(); //Confirma as alterações feitas
+        entityManager.close();
     }
 }
